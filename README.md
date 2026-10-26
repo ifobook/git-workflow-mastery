@@ -238,38 +238,54 @@ GitHub Issues provide a structured way to track development tasks, improvements,
 
 [Issue #3 — Improve Project README](https://github.com/ifobook/git-workflow-mastery/issues/3) tracks the documentation improvements in this project.
 
-The documentation work is being implemented on the `docs/issue-3-readme` branch.
+The README documentation was developed on the `docs/issue-3-readme` branch and successfully merged into `main` through [Pull Request #4](https://github.com/ifobook/git-workflow-mastery/pull/4).
 
-A Pull Request will be linked to the Issue so that the documentation work can be reviewed and tracked.
+Additional screenshot evidence was added through [Pull Request #5](https://github.com/ifobook/git-workflow-mastery/pull/5).
+
+The final documentation update includes the completed GitHub Release and branch protection milestones.
+
+Issue #3 will be closed when the final documentation Pull Request is merged into `main`.
 
 ## 12. Git Tags and GitHub Releases
 
 Git tags identify important points in repository history, such as software versions.
 
-For example, an annotated release tag can be created using:
+The first release uses the annotated tag `v1.0.0`, created using:
 
 ```bash
-git tag -a v1.0.0 -m "Git Workflow Mastery version 1.0.0"
+git tag -a v1.0.0 -m "Git Workflow Mastery v1.0.0 - Initial documented release"
 git push origin v1.0.0
 ```
 
-GitHub Releases can then be created from the tag to document version changes and provide a reference point for users.
+The tag references commit `a0eb617`, which includes the application, Git workflow documentation, merge conflict exercise, and Pull Request evidence.
 
-**Status:** Release creation is a remaining project milestone.
+A GitHub Release was successfully published using this tag.
+
+**Published Release:** [Git Workflow Mastery v1.0.0](https://github.com/ifobook/git-workflow-mastery/releases/tag/v1.0.0)
+
+**Status:** Completed.
+
 
 ## 13. Branch Protection
 
 Branch protection helps safeguard important branches by controlling how changes are merged.
 
-Common settings include:
+A branch protection rule has been created for the `main` branch.
+
+The configured workflow includes:
 
 - Requiring Pull Requests before merging.
-- Requiring approvals before merging.
-- Preventing force pushes.
-- Preventing accidental branch deletion.
-- Requiring status checks when appropriate.
+- Requiring conversation resolution before merging.
+- Keeping force pushes disabled.
+- Keeping branch deletion disabled.
+- Leaving required approvals disabled for the current single-contributor workflow.
+- Leaving required status checks disabled until CI checks are introduced.
+- Allowing merge commits by not requiring linear history.
 
-**Status:** Branch protection configuration and verification are remaining project milestones.
+These settings support a structured contribution workflow while allowing the project to continue without an additional reviewer.
+
+**Status:** Branch protection rule created.
+
 
 ## 14. Screenshots and Evidence
 
@@ -282,6 +298,9 @@ The repository includes screenshots documenting the Git workflow.
 | Git commit and merge history | [View](screenshots/commit-history.png) |
 | Merge conflict evidence | [View](screenshots/merge-conflict-before.png) |
 | Resolved merge conflict | [View](screenshots/merge-conflict-resolved.png) |
+| README Pull Request | [View](screenshots/readme-pull-request.png) |
+| GitHub Release v1.0.0 | [View](screenshots/github-release-v1.0.0.png) |
+| Main branch protection | [View](screenshots/main-branch-protection.png) |
 
 The merge conflict evidence includes Git's reconstructed conflict output where applicable.
 
